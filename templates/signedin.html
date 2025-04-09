@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectVibe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #301934, #000000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+        }
+        .analysis-section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #121212;
+        }
+        .analysis-section h2 {
+            color: #8e44ad;
+            margin-bottom: 15px;
+        }
+        .analysis-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .analysis-section li {
+            margin-bottom: 8px;
+        }
+        .testimonial-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .slider-arrow.left {
+            left: 10px;
+        }
+
+        .slider-arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, you are signed in!</h1>
+        <button onclick="location.href='/step1'">Fill Out Profile Analyzer</button>
+        <div class="analysis-section">
+            <h2>Free Analysis</h2>
+            <p>Here's a quick analysis of your profile:</p>
+            <ul>
+                <li>Basic profile strength-weakness assessment</li>
+                <li>No Category Scores / 100</li>
+                <li>General recommendations for improvement</li>
+                <li>No college recommendations</li>
+        </div>
+    </div>
+</body>
+</html>

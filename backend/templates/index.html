@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Collaboration</title>
+</head>
+<body>
+    <h1>Welcome to the Project Collaboration Platform!</h1>
+    <p>Here you can find and join exciting extracurricular projects.</p>
+    <a href="{{ url_for('create_project') }}">Create a New Project</a>
+    <h2>Available Projects:</h2>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

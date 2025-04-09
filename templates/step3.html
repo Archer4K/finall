@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3: Activities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #301934, #000000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        button {
+            background-color: #8e44ad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #activities {
+            margin-bottom: 15px;
+        }
+
+        #activities div {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #activities div input {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Step 3: Activities</h2>
+        <form action="/step4" method="post">
+            <div id="activities">
+                <div>
+                    <input type="text" name="activityName1" placeholder="Activity Name">
+                    <input type="text" name="activityDescription1" placeholder="Activity Description">
+                    <input type="text" name="hoursPerWeek1" placeholder="Hours per Week">
+                </div>
+            </div>
+            <button type="button" onclick="addActivity()">Add Activity</button>
+            <button type="submit">Next</button>
+            <button type="button" onclick="location.href='/step2'">Previous</button>
+        </form>
+    </div>
+
+    <script>
+        function addActivity() {
+            // This function is not fully implemented, but it's here for future use
+            alert('Adding activities is not yet implemented.');
+        }
+    </script>
+</body>
+</html>

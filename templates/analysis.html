@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #301934, #000000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto mt-10 p-6 bg-gray-800 rounded-lg shadow-xl">
+        <h2 class="text-3xl font-semibold text-center text-purple-500 mb-6">Profile Analysis</h2>
+        <form action="/save_recommendations" method="post">
+            <div class="analysis-section mb-4">
+                <h3 class="text-2xl font-semibold text-purple-400 mb-3">Strengths</h3>
+                {% for strength in strengths.splitlines() %}
+                    <p class="mb-2 text-gray-300">{{ strength }}</p>
+                {% endfor %}
+            </div>
+            <div class="analysis-section mb-4">
+                <h3 class="text-2xl font-semibold text-purple-400 mb-3">Weaknesses</h3>
+                {% for weakness in weaknesses.splitlines() %}
+                    <p class="mb-2 text-gray-300">{{ weakness }}</p>
+                {% endfor %}
+            </div>
+            <div class="analysis-section mb-4">
+                <h3 class="text-2xl font-semibold text-purple-400 mb-3">Recommendations</h3>
+                {% for recommendation in recommendations.splitlines() %}
+                    <label class="flex items-center mb-2 text-gray-300">
+                        <input type="checkbox" name="recommendations" value="{{ recommendation }}" class="mr-2">
+                        {{ recommendation }}
+                    </label>
+                {% endfor %}
+            </div>
+            <div class="analysis-section mb-4">
+                <h3 class="text-2xl font-semibold text-purple-400 mb-3">Short-Term Goals</h3>
+                {% for goal in short_term_goals.splitlines() %}
+                    <p class="mb-2 text-gray-300">{{ goal }}</p>
+                {% endfor %}
+            </div>
+            <div class="analysis-section">
+                <h3 class="text-2xl font-semibold text-purple-400 mb-3">Long-Term Goals</h3>
+                {% for goal in long_term_goals.splitlines() %}
+                    <p class="mb-2 text-gray-300">{{ goal }}</p>
+                {% endfor %}
+            </div>
+            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Save Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>
